@@ -1,15 +1,3 @@
-/*function erud() { 
-  var script = document.createElement('script'); 
-  script.src="https://cdn.jsdelivr.net/npm/eruda"; 
-  document.body.appendChild(script);
-  script.onload = function () {
-    eruda.init();
-  };
-};
-erud();*/
-
-//console.log(fetching)
-
 /*function work(time, column, hist) {
 
   for (let i = 0; i < column; i++) {
