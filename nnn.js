@@ -6,7 +6,7 @@ const needle = require('needle');
 // The code below sets the bearer token from your environment variables
 // To set environment variables on macOS or Linux, run the export command below from the terminal:
 // export BEARER_TOKEN='YOUR-TOKEN'
-const token = 'AAAAAAAAAAAAAAAAAAAAAGFPsQEAAAAAdMiSNdu7xguHzWKwYVpy3U7uO0Q%3D2Jjw0lKGUIRNc0qxNtOU8PuH7z0SLbwALJ2W689jBFGE7dGBsS';
+const token = '';
 
 const endpointUrl = 'https://api.twitter.com/2/tweets/counts/all'
 
