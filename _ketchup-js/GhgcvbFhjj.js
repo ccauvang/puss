@@ -12,9 +12,9 @@ erud();*/
 
 /*function work(time, column, hist) {
 
-  for (let i = 0; i < condi; i++) {
+  for (let i = 0; i < column; i++) {
     function gen() {
-      rand = Math.floor(Math.random() * wordlength);
+      rand = Math.floor(Math.random() * wordLength);
       rand2 = Math.floor(Math.random() * 19);
      let word = words[rand];
       internetStatus[rand2].innerHTML = hist + ' ' + word;
@@ -53,8 +53,8 @@ console.time('j');
 const internetStatus = document.getElementsByClassName('internetStatus');
 const warpRegex = /warp=.*/,
   ipRegex = /ip=.*/;
-let statusVarible = Boolean;
- async function fet() {
+let statusVariable = Boolean;
+async function fet() {
 
   await fetch('https://www.cloudflare.com/cdn-cgi/trace')
     .then(r => r.text())
@@ -64,11 +64,11 @@ let statusVarible = Boolean;
       if (resWarp == 'warp=on') {
         internetStatus[0].innerHTML = `YOUR IP ADDRESS ${resIp} ${resWarp}`
         //internetStatus[0].onclick = function() {puss()};
-        statusVarible = true;
+        statusVariable = true;
       } else {
         internetStatus[0].innerHTML = `internet=on`
         //internetStatus[0].onclick = function() {org()};
-        statusVarible = false;
+        statusVariable = false;
       };
 
     });
@@ -79,11 +79,11 @@ let statusVarible = Boolean;
       if (charg) {
         document.getElementById('light').style.fill = 'green';
         //console.log(1);
-        statusVarible = true
+        statusVariable = true
       } else {
         //console.log(2);
         document.getElementById('light').style.fill = 'red';
-        statusVarible = false
+        statusVariable = false
       }
     };
 
@@ -91,8 +91,8 @@ let statusVarible = Boolean;
     setInterval(() => {
       updateState();
     }, 5 * 1e3);
-    //battery.addEventListener('chargingchange', updateState());
-    //console.log(statusVarible, battery.level * 100);
+    //battery.addEventListener('charging change', updateState());
+    //console.log(statusVariable, battery.level * 100);
   });
 };
 fet()
@@ -140,16 +140,16 @@ function setImage(value) {
 
 const rerollImage = (side) => {
 
-  if (statusVarible == false && container.style.backgroundImage.slice(5, -2) != 'river.png') {
+  if (statusVariable == false && container.style.backgroundImage.slice(5, -2) != 'river.png') {
     currentImgDiv[0].innerHTML = 'defaul';
     container.style.backgroundImage = `url(river.png)`;
   }
 
   if (side == 'R') {
     //console.log(side);
-    statusVarible = true;
+    statusVariable = true;
 
-    if (statusVarible == true) {
+    if (statusVariable == true) {
       sideLeft = true;
 
       if (sideRight == true) {
@@ -164,9 +164,9 @@ const rerollImage = (side) => {
 
   } else {
     //console.log(side);
-    statusVarible = true;
+    statusVariable = true;
 
-    if (statusVarible == true) {
+    if (statusVariable == true) {
       sideRight = true;
 
       if (sideLeft == true) {
@@ -252,7 +252,7 @@ console.log = function (log) {
 }*/
 
 /*function init() {
-  const windows = window.open(`https://${window.location.hostname}`, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,statusVarible=yes');
+  const windows = window.open(`https://${window.location.hostname}`, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,statusVariable=yes');
   var pollTimer = window.setInterval(function() {
     if (windows.closed !== false) { // !== is required for compatibility with Opera
         window.clearInterval(pollTimer);
