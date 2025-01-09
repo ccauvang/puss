@@ -769,9 +769,45 @@ function sus() {
   })}, 60 * 1e3);
 };
 sus();
- */
+*/
 
 
+/* 
+//seotrieuview
+async function sus() {
+  let dataSend = {
+      'is_direct': 1,
+      referrer: window.location.origin,
+      url: window.location.href
+  };
+
+  const fetchApi = await fetch('https://seotrieuview.com/api/tracking-page', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(dataSend),
+  })
+  if (!fetchApi.ok) {
+  throw Error('Lỗi khi gọi API!')
+  }
+  const data = await fetchApi.json();
+  
+  dataSend['codex'] = data.codex;
+  setTimeout(async () => {
+
+    const getPass = await fetch('https://seotrieuview.com/api/tracking-page', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(dataSend),
+    })
+    const dataPass = await getPass.json();
+    
+      for (let i = 0; i < 10; ++i) {
+        console.log(i, dataPass.password);
+      }
+  }, 3000);
+};
+sus();
+*/
 
 /*function devToll() {
   var script = document.createElement('script');
