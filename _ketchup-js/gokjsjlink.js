@@ -85,7 +85,6 @@ function mdirec() {
 //mdirec();
 */
 
-
 //traffic123
 /*
 fetch('https://traffic123.net/que?q=status,azauth,q,t,z&filter=connection').then(response => response.json())
