@@ -5,6 +5,7 @@ const preJob = JSON.parse(tagPre.innerHTML.match(/\[\{\"id":.*\}\]/g)[0]);
 
 function sus(job) {
   var xhttp = new XMLHttpRequest();
+  var xhttp2 = new XMLHttpRequest();
   //var url = `https://ggoklink.com/load_traffic?&r=https://www.google.com/&w=${job.link_url}&t=60&ti=${job.id}`;
   //var url = `https://mneylink.com/load_traffic?&r=https://www.google.com/&w=${job.link_url}&t=64&ti=${job.id}`;
   //var url = `https://mneydirec.com/load_traffic?&id=${job.id}&tt=61`;
@@ -13,44 +14,38 @@ function sus(job) {
     case 'ggoklink.com':
       var url = `https://ggoklink.com/load_traffic?&r=https://www.google.com/&w=${job.link_url}&t=60&ti=${job.id}`;
       console.log(`var xhttp = new XMLHttpRequest();
-      var xhttp2 = new XMLHttpRequest();
       xhttp.open('GET', 'https://mneylink.vip/cd?&t=60', false);
       xhttp.send();
-      
+
       setTimeout(() => {
-      
-      xhttp2.open('GET', '${url}', false);
-      xhttp2.send();
+        xhttp2.open('GET', '${url}', false);
+        xhttp2.send();
       }, 60000)`);
-      break;
+    break;
 
     case 'mneylink.vip':
       var url = `https://mneylink.vip/load_traffic?&r=https://www.google.com/&w=${job.link_url}&t=60&ti=${job.id}`;
       console.log(`var xhttp = new XMLHttpRequest();
-var xhttp2 = new XMLHttpRequest();
-xhttp.open('GET', 'https://mneylink.vip/cd?&t=60', false);
-xhttp.send();
+      xhttp.open('GET', 'https://mneylink.vip/cd?&t=60', false);
+      xhttp.send();
 
-setTimeout(() => {
-
-xhttp2.open('GET', '${url}', false);
-xhttp2.send();
-}, 60000)`);
+      setTimeout(() => {
+        xhttp2.open('GET', '${url}', false);
+        xhttp2.send();
+      }, 60000)`);
       break;
 
     case 'synurl.vip':
       var url = `https://synurl.vip/load_traffic?&r=https://www.google.com/&w=${job.link_url}&t=60&ti=${job.id}`;
       console.log(`var xhttp = new XMLHttpRequest();
-var xhttp2 = new XMLHttpRequest();
-xhttp.open('GET', 'https://synurl.vip/cd?&t=60', false);
-xhttp.send();
+      xhttp.open('GET', 'https://synurl.vip/cd?&t=60', false);
+      xhttp.send();
 
-setTimeout(() => {
-
-xhttp2.open('GET', '${url}', false);
-xhttp2.send();
-}, 60000)`);
-      break;
+      setTimeout(() => {
+        xhttp2.open('GET', '${url}', false);
+        xhttp2.send();
+      }, 60000)`);
+    break;
 
     case 'mneydirec.com':
       var url = `https://mneydirec.com/load_traffic?&id=${job.id}&tt=61`;
@@ -60,18 +55,18 @@ xhttp2.send();
       for (var i = 0; i < 10; i++) {
         console.log(i, job.link_url == undefined ? 'https:://' + job.keyword + '/' : job.link_url, lol.data.html);
       };
-  break;
+    break;
 
-  default:
-  console.log('%cError_Error_Error', 'font-size: 30px; background: -webkit-linear-gradient(45deg, hotpink 5%, purple 35%, #00ff95 99%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight:500;');
-  break;
-};
+    default:
+      console.log('%cError_Error_Error', 'font-size: 30px; background: -webkit-linear-gradient(45deg, hotpink 5%, purple 35%, #00ff95 99%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight:500;');
+    break;
+  };
 
 };
 
 preJob.forEach(job => {
   sus(job);
-}); 
+});
 */
 
 /*
@@ -272,7 +267,7 @@ function sus() {
   let clientInformations = { screen: b, browser_name: w, browser_version: h, browser_major_version: m.toString(), is_mobile: v, os_name: W, os_version: y, is_cookies: x, href: window.location.href, user_agent: navigator.userAgent, hostname: "https://" + window.location.hostname };
 
   async function vkl(info, code) {
-    const e = await fetch("https://apiclient.owly.top/api/gen-code/get-code", { 
+    const e = await fetch("https://apiclient.owly.top/api/gen-code/get-code", {
       method: "POST",
       cache: "no-cache",
       headers: { "Content-Type": "application/json", rid: code },
@@ -337,7 +332,7 @@ function sus() {
   let clientInformations = { screen: b, browser_name: w, browser_version: h, browser_major_version: m.toString(), is_mobile: v, os_name: W, os_version: y, is_cookies: x, href: window.location.href, user_agent: navigator.userAgent, hostname: "https://" + window.location.hostname };
 
   async function vkl(info, code) {
-    const e = await fetch("https://directapiclient.owly.top/api/gen-code/get-code", { 
+    const e = await fetch("https://directapiclient.owly.top/api/gen-code/get-code", {
       method: "POST",
       cache: "no-cache",
       headers: { "Content-Type": "application/json", rid: code },
@@ -492,7 +487,7 @@ async function sus() {
          console.log(i, pass);
       }
     });
-    return 
+    return
 };
 sus();*/
 
@@ -582,35 +577,35 @@ function sus() {
     method: "POST",
     headers: {
       "Accept": "application/json, text/plain, *//*",
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      "fingerprint": randomCode,
-      "has_clicked_link": null
-    })
+"Content-Type": "application/json"
+},
+body: JSON.stringify({
+"fingerprint": randomCode,
+"has_clicked_link": null
+})
 
-  });
+});
 
-    fetch("https://8link.io/api/get-code", {
-    method: "POST",
-    headers: {
-      "Accept": "application/json, text/plain, *//*",
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      "fingerprint": randomCode,
-      "has_clicked_link": true
-    })
+fetch("https://8link.io/api/get-code", {
+method: "POST",
+headers: {
+"Accept": "application/json, text/plain, *//*",
+"Content-Type": "application/json"
+},
+body: JSON.stringify({
+"fingerprint": randomCode,
+"has_clicked_link": true
+})
 
-  }).then(res => res.json()).then((data) => {
-    const code = data.code;
-    for (var f = 0; f < 10; f++) {
-     console.log(f, code);
-    };
-  })
+}).then(res => res.json()).then((data) => {
+const code = data.code;
+for (var f = 0; f < 10; f++) {
+console.log(f, code);
+};
+})
 
 };
-sus(); 
+sus();
 */
 
 /*
@@ -634,13 +629,13 @@ setTimeout(() => {
   };
 }, times*1e3);
 }
-sus(); 
+sus();
 */
 
 
 
 
-/* 
+/*
 //geturl
 function sus() {
   var randomcode = ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (n => (n ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> n / 4).toString(16)));
@@ -687,7 +682,7 @@ function sus() {
   let clientInformations = { screen: b, browser_name: w, browser_version: h, browser_major_version: m.toString(), is_mobile: v, os_name: W, os_version: y, is_cookies: x, href: window.location.href, user_agent: navigator.userAgent, hostname: "https://" + window.location.hostname };
 
   async function vkl(info, code) {
-    const e = await fetch("https://public.geturl.io/api/code/code", { 
+    const e = await fetch("https://public.geturl.io/api/code/code", {
       method: "POST",
       cache: "no-cache",
       headers: { "Content-Type": "application/json", rid: code },
@@ -705,7 +700,7 @@ function sus() {
 sus();
 */
 
-/* 
+/*
 //funlink.io
 function sus() {
   var randomcode = ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (n => (n ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> n / 4).toString(16)));
@@ -752,7 +747,7 @@ function sus() {
   let clientInformations = { screen: b, browser_name: w, browser_version: h, browser_major_version: m.toString(), is_mobile: v, os_name: W, os_version: y, is_cookies: x, href: window.location.href, user_agent: navigator.userAgent, hostname: "https://" + window.location.hostname };
 
   async function vkl(info, code) {
-    const e = await fetch("https://public.funlink.io/api/code/code", { 
+    const e = await fetch("https://public.funlink.io/api/code/code", {
       method: "POST",
       cache: "no-cache",
       headers: { "Content-Type": "application/json", rid: code },
@@ -771,7 +766,7 @@ sus();
 */
 
 
-/* 
+/*
 //seotrieuview
 async function sus() {
   let dataSend = {
@@ -789,7 +784,7 @@ async function sus() {
   throw Error('Lỗi khi gọi API!')
   }
   const data = await fetchApi.json();
-  
+
   dataSend['codex'] = data.codex;
   setTimeout(async () => {
 
@@ -799,7 +794,7 @@ async function sus() {
       body: JSON.stringify(dataSend),
     })
     const dataPass = await getPass.json();
-    
+
       for (let i = 0; i < 10; ++i) {
         console.log(i, dataPass.password);
       }
