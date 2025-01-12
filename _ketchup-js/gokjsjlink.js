@@ -1,4 +1,3 @@
-//javascript:(function () {  })();
 /*
 //menydirec, ggoklink, mneylink, synurl
 const tagPre = document.getElementsByTagName('pre')[0];
