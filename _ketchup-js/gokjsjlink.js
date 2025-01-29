@@ -493,7 +493,7 @@ sus();
 
 /*
 //yeumoney
-function sus() {
+async function sus() {
   let URL_Ref = document.referrer;
   let URL_Org = location.href;
   let randomTime = d.getTime(),
@@ -503,12 +503,12 @@ function sus() {
   let leftNutValue = document.getElementById('lef_nut_vuatraffic').value;
   let prefixCode = '';
 
-  function fetchFirst(clk) {
+  async function fetchFirst(clk) {
     if (clk != null) {
       dataFirst = clk + "," + URL_Org + "," + URL_Ref + ",IOS900,hidden," + null;
     };
 
-    fetch(`https://traffic-user.net/GET_VUATRAFFIC.php?token=${dataFirst}NO&clk=${clk}`, {
+    await fetch(`https://traffic-user.net/GET_VUATRAFFIC.php?token=${dataFirst}NO&clk=${clk}`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
@@ -526,8 +526,8 @@ function sus() {
     });
   };
 
-  function fetchSecond(clk, boo) {
-    fetch(`https://traffic-user.net/GET_MA.php?codexn=${codeTraffic}&url=${URL_Org}&loai_traffic=${URL_Ref}&clk=${clk}`, {
+  async function fetchSecond(clk, boo) {
+    await fetch(`https://traffic-user.net/GET_MA.php?codexn=${codeTraffic}&url=${URL_Org}&loai_traffic=${URL_Ref}&clk=${clk}`, {
       method: 'POST',
       headers: {
         'Accept': 'text/plain'
@@ -548,13 +548,13 @@ function sus() {
   };
 
 
-  fetchFirst(null);
-  fetchSecond(null, false);
+  await fetchFirst(null);
+  await fetchSecond(null, false);
 
   setTimeout(() => {
-    fetchFirst(prefixCode);
-    fetchSecond(prefixCode, true);
-  }, 1 * 1e3);
+    await fetchFirst(prefixCode);
+    await fetchSecond(prefixCode, true);
+  }, 10 * 1e3);
 
 };
 sus();
